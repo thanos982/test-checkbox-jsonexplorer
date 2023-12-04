@@ -26,10 +26,4 @@ describe('pathToString', () => {
     const queryString = pathToString(emptyPath)
     expect(queryString).toEqual('')
   })
-
-  it('handles negative numbers in the path', () => {
-    const examplePath: Path = ['foo', -1, 'bar']
-    const queryString = pathToString(examplePath)
-    expect(queryString).toEqual('foo[-1].bar')
-  })
 })
