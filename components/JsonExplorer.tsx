@@ -15,13 +15,13 @@ export type JsonData = {
 type JsonExplorerProps = {
   data: JsonData
 }
-type Output = {
+type OutputState = {
   path: string
   value: string
 }
 
 export const JsonExplorer = ({ data }: JsonExplorerProps): JSX.Element => {
-  const [output, setOutput] = useState<Output>({
+  const [output, setOutput] = useState<OutputState>({
     path: '',
     value: '',
   })
