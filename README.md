@@ -5,7 +5,7 @@ A React/NextJS/Typescript project
 Project folder structure:
 
 - app: NextJS-related files (pages etc)
-- components: the React components
+- [components](/components): the React components
 - data: the sample json data used in the components
 - types: shared typescript types
 - utils: utility methods
