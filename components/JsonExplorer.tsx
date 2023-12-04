@@ -27,7 +27,7 @@ export const JsonExplorer = ({ data }: JsonExplorerProps): JSX.Element => {
   })
 
   /**
-   * Handles the click event on a JSON object key.
+   * Handles the click event of the provided json object's keys.
    * @param {Path} path - The path to the selected key.
    * @returns {void}
    */
