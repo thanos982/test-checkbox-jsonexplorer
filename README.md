@@ -1,6 +1,6 @@
 ## Overview
 
-A Next JS project
+A React/NextJS/Typescript project
 
 Project folder structure:
 
@@ -18,7 +18,7 @@ To run the server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) and use the menu links to navigate through the test components.
+Open [http://localhost:3000](http://localhost:3000) and use the menu links to navigate through the component pages.
 
 ## Testing
 
