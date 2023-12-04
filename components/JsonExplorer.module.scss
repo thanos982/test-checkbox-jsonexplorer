@@ -1,0 +1,69 @@
+.jsonObjectContainer {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: monospace;
+}
+
+.key {
+  display: inline;
+
+  &::after {
+    // add a semi-colon after the json object's key
+    content: ':';
+  }
+}
+
+.value {
+  display: inline;
+  margin-left: 10px;
+
+  // add a comma after the json object's value
+  &:after {
+    content: ',';
+  }
+}
+
+// remove the comma after the last json object's value
+.keyValuePair {
+  &:last-of-type > .value:after {
+    content: '';
+  }
+}
+
+// styles for values that are arrays
+.array {
+  display: inline;
+
+  // add [] around the array
+  &::before {
+    content: '[';
+  }
+  &::after {
+    content: ']';
+  }
+
+  // styles for json objects that are inside an array
+  .jsonObject {
+    $spacing: 30px;
+
+    display: block;
+
+    // add {} around the json object
+    &::before {
+      content: '{';
+    }
+    &::after {
+      content: '}';
+    }
+
+    &::before,
+    &::after {
+      display: block;
+      margin-left: $spacing;
+    }
+
+    .keyValuePair {
+      margin-left: $spacing * 2;
+    }
+  }
+}

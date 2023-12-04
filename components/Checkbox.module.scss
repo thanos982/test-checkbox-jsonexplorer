@@ -1,0 +1,49 @@
+$checkboxSize: 25px;
+
+.customCheckbox {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: $checkboxSize;
+  height: $checkboxSize;
+
+  svg {
+    background-color: #fff;
+    color: #fff;
+    border-radius: 3px;
+  }
+}
+
+.label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  input:checked + .customCheckbox svg {
+    background-color: #000;
+  }
+
+  input:focus-visible {
+    // disable default input focus outline
+    outline: none;
+
+    // enable outline focus for custom checkbox
+    & + .customCheckbox {
+      outline: 2px solid Highlight; // color for firefox
+      outline: 2px solid -webkit-focus-ring-color; // color for safari, chrome, opera
+      outline-offset: 3px;
+    }
+  }
+
+  // hide input visually but remain accessible to screen readers
+  input.srOnly {
+    position: absolute;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+}

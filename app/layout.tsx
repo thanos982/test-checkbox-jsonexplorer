@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import Link from 'next/link'
+import styles from './layout.module.scss'
+import './globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +17,25 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang='en'>
+      <body className={inter.className}>
+        <nav className={styles.nav}>
+          <ul>
+            <li>
+              <Link href='/'>Checkbox (input visible)</Link>
+            </li>
+            <li>
+              <Link href='/checkbox-input-hidden'>Checkbox (input hidden)</Link>
+            </li>
+            <li>
+              <Link href='/json-explorer'>JSON Explorer</Link>
+            </li>
+          </ul>
+        </nav>
+        <main className={styles.main}>
+          <div className={styles.description}>{children}</div>
+        </main>
+      </body>
     </html>
   )
 }
