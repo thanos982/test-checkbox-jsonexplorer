@@ -26,6 +26,10 @@ export const JsonExplorer = ({ data }: JsonExplorerProps): JSX.Element => {
     value: '',
   })
 
+  const isDataEmpty = !Object.keys(data).length;
+
+
+
   /**
    * Handles the click event of the provided json object's keys.
    * @param {Path} path - The path to the selected key.
@@ -40,9 +44,12 @@ export const JsonExplorer = ({ data }: JsonExplorerProps): JSX.Element => {
 
   return (
     <div>
-      <div className={styles.jsonObjectContainer}>
+
+      { !isDataEmpty && <div className={styles.jsonObjectContainer}>
         <JsonObject data={data} onKeyClick={handleClick} />
-      </div>
+      </div> }
+      
+      { isDataEmpty && <div data-testid='output'>No data</div> }
 
       {output.value && (
         <div data-testid='output'>

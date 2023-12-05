@@ -14,3 +14,8 @@ test('clicking the key shows the correct key path', async () => {
   await userEvent.click(screen.getByText('id'))
   expect(screen.getByTestId('output')).toHaveTextContent('res.fields[0].id')
 })
+
+test('empty data displays "No data"', async () => {
+  render(<JsonExplorer data={{}} />)
+  expect(screen.getByTestId('output')).toHaveTextContent('No data')
+})
