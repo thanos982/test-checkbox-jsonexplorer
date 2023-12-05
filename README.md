@@ -4,9 +4,10 @@ A React/NextJS/Typescript project
 
 Project folder structure:
 
-- app: NextJS-related files (pages etc)
+- \_\_tests\_\_: tests
+- app: NextJS-related files (eg pages)
 - [components](/components): the React components
-- data: the sample json data used in the components
+- data: the sample json data, used in the components
 - types: shared typescript types
 - utils: utility methods
 
@@ -21,8 +22,6 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) and use the menu links to navigate through the component pages.
 
 ## Testing
-
-Currently covers only the util method.
 
 ```bash
 npm run test

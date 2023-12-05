@@ -41,7 +41,6 @@ export const JsonObject = ({
                   <div className={styles.key}>
                     <button
                       type='button'
-                      data-testid={`click-${key}`}
                       onClick={(e) => {
                         e.preventDefault()
                         onKeyClick([...path, key])

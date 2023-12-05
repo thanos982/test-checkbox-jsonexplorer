@@ -1,5 +1,5 @@
-import { pathToString } from './pathToString'
-import type { Path } from '../types'
+import { pathToString } from '../../utils/pathToString'
+import type { Path } from '../../types'
 
 describe('pathToString', () => {
   it('converts a path array to a string', () => {

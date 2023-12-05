@@ -1,15 +1,15 @@
 {
-  "extends": ["next/core-web-vitals"],
+  "extends": ["next/core-web-vitals", "plugin:jsx-a11y/recommended"],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "jest", "testing-library"],
+  "plugins": ["@typescript-eslint", "jest", "testing-library", "jsx-a11y"],
   "env": {
     "jest/globals": true
   },
   "rules": {
-		"testing-library/await-async-queries": "error",
-		"testing-library/no-await-sync-queries": "error",
-		"testing-library/no-debugging-utils": "warn",
-		"testing-library/no-dom-import":  "off",
+    "testing-library/await-async-queries": "error",
+    "testing-library/no-await-sync-queries": "error",
+    "testing-library/no-debugging-utils": "warn",
+    "testing-library/no-dom-import": "off",
     "no-duplicate-imports": ["error", { "includeExports": true }],
     "@typescript-eslint/consistent-type-imports": [
       "error",

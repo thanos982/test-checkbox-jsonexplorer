@@ -6,7 +6,7 @@ type CheckboxProps = {
 
 export const Checkbox = ({ hideInput = true }: CheckboxProps): JSX.Element => {
   return (
-    <label className={styles.label}>
+    <span className={styles.container}>
       <input type='checkbox' className={`${hideInput && styles.srOnly}`} />
       <span className={styles.customCheckbox}>
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'>
@@ -21,6 +21,6 @@ export const Checkbox = ({ hideInput = true }: CheckboxProps): JSX.Element => {
           ></polyline>
         </svg>
       </span>
-    </label>
+    </span>
   )
 }
