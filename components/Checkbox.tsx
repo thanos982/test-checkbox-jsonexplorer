@@ -5,6 +5,11 @@ type CheckboxProps = {
   hideInput?: boolean
 }
 
+/**
+ * A custom checkbox component.
+ * @param labelText - The text of the label. Optional.
+ * @param hideInput - Whether to hide the input element.
+ */
 export const Checkbox = ({
   labelText = '',
   hideInput = true,
