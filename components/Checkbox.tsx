@@ -24,9 +24,9 @@ export const Checkbox = ({
             points='216 72.005 104 184 48 128.005'
             fill='none'
             stroke='currentColor'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            stroke-width='16'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='16'
           ></polyline>
         </svg>
       </span>
