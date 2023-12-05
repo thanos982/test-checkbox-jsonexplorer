@@ -1,5 +1,5 @@
 import { Checkbox } from '../../components/Checkbox'
 
 export default function Page() {
-  return <Checkbox hideInput={true} />
+  return <Checkbox />
 }

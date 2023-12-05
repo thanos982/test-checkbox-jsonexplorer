@@ -13,6 +13,12 @@ Project folder structure:
 
 ## Getting Started
 
+```bash
+npm i
+```
+
+Tested with npm v9.8.0, node versions 20.4.0 and 19.1.0.
+
 To run the server
 
 ```bash

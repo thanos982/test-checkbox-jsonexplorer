@@ -1,12 +1,16 @@
 import styles from './Checkbox.module.scss'
 
 type CheckboxProps = {
+  labelText?: string
   hideInput?: boolean
 }
 
-export const Checkbox = ({ hideInput = true }: CheckboxProps): JSX.Element => {
+export const Checkbox = ({
+  labelText = '',
+  hideInput = true,
+}: CheckboxProps): JSX.Element => {
   return (
-    <span className={styles.container}>
+    <label data-testid='checkbox' className={styles.container}>
       <input type='checkbox' className={`${hideInput && styles.srOnly}`} />
       <span className={styles.customCheckbox}>
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'>
@@ -21,6 +25,7 @@ export const Checkbox = ({ hideInput = true }: CheckboxProps): JSX.Element => {
           ></polyline>
         </svg>
       </span>
-    </span>
+      {labelText}
+    </label>
   )
 }
