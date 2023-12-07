@@ -42,9 +42,13 @@ $checkboxSize: 25px;
   // hide input visually but remain accessible to screen readers
   input.srOnly {
     position: absolute;
-    border: 0;
-    height: 1px;
     width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
     overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 }
